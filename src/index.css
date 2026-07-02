@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+html.dark {
+  background-color: #0d0f14;
+  color: #f1f5f9;
+}
+
+html.dark body {
+  background-color: #0d0f14;
+  color: #f1f5f9;
+}
+
+/* Background overrides */
+html.dark .min-h-screen {
+  background-color: #0d0f14 !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark header,
+html.dark .bg-white {
+  background-color: #12141c !important;
+  color: #f1f5f9 !important;
+  border-color: #212536 !important;
+}
+
+html.dark .bg-slate-50 {
+  background-color: #161924 !important;
+  color: #f1f5f9 !important;
+  border-color: #212536 !important;
+}
+
+html.dark .bg-slate-100 {
+  background-color: #1a1e2d !important;
+  color: #e2e8f0 !important;
+  border-color: #212536 !important;
+}
+
+html.dark .bg-gray-50, html.dark .bg-neutral-50 {
+  background-color: #161924 !important;
+}
+
+/* Borders */
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-300,
+html.dark .border-slate-200/80,
+html.dark .border-b-slate-100,
+html.dark .border-slate-100/50,
+html.dark .border-slate-100/60 {
+  border-color: #212536 !important;
+}
+
+/* Text class overrides */
+html.dark .text-slate-900,
+html.dark .text-slate-800,
+html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-slate-400,
+html.dark .text-slate-350 {
+  color: #64748b !important;
+}
+
+/* Form inputs & select overrides */
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #161924 !important;
+  color: #f8fafc !important;
+  border-color: #2b3047 !important;
+}
+
+html.dark input:focus,
+html.dark select:focus,
+html.dark textarea:focus {
+  border-color: #EF6C00 !important;
+}
+
+html.dark select option {
+  background-color: #12141c !important;
+  color: #f8fafc !important;
+}
+
+/* Toggle hover states & interactive table rows */
+html.dark .hover\:bg-slate-50:hover,
+html.dark .hover\:bg-slate-100:hover,
+html.dark .hover\:bg-slate-50/40:hover {
+  background-color: #1c202f !important;
+}
+
+html.dark .divide-y > * + * {
+  border-color: #212536 !important;
+}
+
+/* Scrollbars */
+html.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #0d0f14;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #212536;
+  border-radius: 4px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #2d324b;
+}
+
+/* Support and status pills */
+html.dark .bg-emerald-50,
+html.dark .bg-emerald-50\/10 {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+  color: #34d399 !important;
+  border-color: rgba(16, 185, 129, 0.2) !important;
+}
+html.dark .bg-amber-50,
+html.dark .bg-amber-500\/10 {
+  background-color: rgba(245, 158, 11, 0.1) !important;
+  color: #fbbf24 !important;
+  border-color: rgba(245, 158, 11, 0.2) !important;
+}
+html.dark .bg-sky-50 {
+  background-color: rgba(14, 165, 233, 0.1) !important;
+  color: #38bdf8 !important;
+  border-color: rgba(14, 165, 233, 0.2) !important;
+}
+html.dark .bg-amber-500/10 {
+  background-color: rgba(245, 158, 11, 0.08) !important;
+}
+
+/* Tabs active interaction states */
+html.dark .text-slate-500.hover\:text-slate-900:hover {
+  color: #f8fafc !important;
+}
